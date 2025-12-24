@@ -59,8 +59,8 @@ QR_CODE = environ.get('QR_CODE', '')
 OWNER_UPI_ID = environ.get('OWNER_UPI_ID', '@fam')
 
 #Auto approve 
-CHAT_ID = [int(app_chat_id) if id_pattern.search(app_chat_id) else app_chat_id for app_chat_id in environ.get('CHAT_ID', '').split()]
-TEXT = environ.get("APPROVED_WELCOME_TEXT", "<b>{mention},\n\nʏᴏᴜʀ ʀᴇǫᴜᴇsᴛ ᴛᴏ ᴊᴏɪɴ {title} ɪs ᴀᴘᴘʀᴏᴠᴇᴅ.\n\‣ ᴘᴏᴡᴇʀᴇᴅ ʙʏ @codflix_bots</b>")
+CHAT_ID = [int(app_chat_id) if id_pattern.search(app_chat_id) else app_chat_id for app_chat_id in environ.get('CHAT_ID', '-1002521169702').split()]
+TEXT = environ.get("APPROVED_WELCOME_TEXT", "<b>{mention},\n\nʏᴏᴜʀ ʀᴇǫᴜᴇsᴛ ᴛᴏ ᴊᴏɪɴ {title} ɪs ᴀᴘᴘʀᴏᴠᴇᴅ.\n\‣ ᴘᴏᴡᴇʀᴇᴅ ʙʏ @Samirmeshram</b>")
 APPROVED = environ.get("APPROVED_WELCOME", "on").lower()
 
 
@@ -70,7 +70,7 @@ APPROVED = environ.get("APPROVED_WELCOME", "on").lower()
 DATABASE_URI = environ.get('DATABASE_URI', "")
 DATABASE_URI2 = environ.get('DATABASE_URI2', "")
 DATABASE_NAME = environ.get('DATABASE_NAME', "yato")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Lucy_files')
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'DpCinemaOfficial')
 
 # ============================
 # Movie Notification & Update Settings
@@ -84,16 +84,16 @@ CAPTION_LANGUAGES = ["Bhojpuri", "Hindi", "Bengali", "Tamil", "English", "Bangla
 # ============================
 VERIFY = bool(environ.get('VERIFY', True))  # Verification On (True) / Off (False)
 VERIFY_EXPIRE = int(environ.get('VERIFY_EXPIRE', 24))  # Add time in hours
-VERIFIED_LOG = int(environ.get('VERIFIED_LOG', '-1001868871195'))  # Log channel id (make sure bot is admin)
+VERIFIED_LOG = int(environ.get('VERIFIED_LOG', '-1002386866175'))  # Log channel id (make sure bot is admin)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', 'https://t.me/How_to_Download_7x/30')  # How to open tutorial link for verification
 
 # ============================
 # Link Shortener Configuration
 # ============================
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'inshorturl.com')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', '')
 SHORTLINK_API = environ.get('SHORTLINK_API', '')
-TUTORIAL = environ.get('TUTORIAL', 'https://t.me/How_to_Download_7x/30')  # Tutorial video link for opening shortlink website
+TUTORIAL = environ.get('TUTORIAL', '')  # Tutorial video link for opening shortlink website
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', False))
 
 # ============================
