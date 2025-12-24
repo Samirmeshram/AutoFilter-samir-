@@ -28,17 +28,17 @@ BOT_TOKEN = environ.get('BOT_TOKEN', "")
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
-PICS = (environ.get('PICS', 'https://envs.sh/WdA.jpg https://envs.sh/Wdj.jpg')).split()  # Sample pic
-NOR_IMG = environ.get("NOR_IMG", "https://envs.sh/Wdj.jpg")
-MELCOW_VID = environ.get("MELCOW_VID", "https://envs.sh/Wdj.jpg")
-SPELL_IMG = environ.get("SPELL_IMG", "https://envs.sh/Wdj.jpg")
-SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://envs.sh/Wdj.jpg'))
-FSUB_PICS = (environ.get('FSUB_PICS', 'https://envs.sh/Wdj.jpg')).split()  # Fsub pic
+PICS = (environ.get('PICS', '')).split()  # Sample pic
+NOR_IMG = environ.get("NOR_IMG", "")
+MELCOW_VID = environ.get("MELCOW_VID", "")
+SPELL_IMG = environ.get("SPELL_IMG", "")
+SUBSCRIPTION = (environ.get('SUBSCRIPTION', ''))
+FSUB_PICS = (environ.get('FSUB_PICS', '')).split()  # Fsub pic
 
 # ============================
 # Admin, Channels & Users Configuration
 # ============================
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6497757690').split()] # Replace with the actual admin ID(s) to add
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '29895250').split()] # Replace with the actual admin ID(s) to add
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001619818259').split()]  # Channel id for auto indexing (make sure bot is admin)
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001868871195'))  # Log channel id (make sure bot is admin)
 BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1001868871195'))  # Bin channel id (make sure bot is admin)
@@ -55,7 +55,7 @@ MULTI_FSUB = [int(channel_id) for channel_id in environ.get('MULTI_FSUB', '-1001
 # ============================
 # Payment Configuration
 # ============================
-QR_CODE = environ.get('QR_CODE', 'https://envs.sh/Wdj.jpg')
+QR_CODE = environ.get('QR_CODE', '')
 OWNER_UPI_ID = environ.get('OWNER_UPI_ID', '@fam')
 
 #Auto approve 
@@ -75,7 +75,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Lucy_files')
 # ============================
 # Movie Notification & Update Settings
 # ============================
-MOVIE_UPDATE_NOTIFICATION = bool(environ.get('MOVIE_UPDATE_NOTIFICATION', False))  # Notification On (True) / Off (False)
+MOVIE_UPDATE_NOTIFICATION = bool(environ.get('MOVIE_UPDATE_NOTIFICATION', True))  # Notification On (True) / Off (False)
 IMAGE_FETCH = bool(environ.get('IMAGE_FETCH', True))  # On (True) / Off (False)
 CAPTION_LANGUAGES = ["Bhojpuri", "Hindi", "Bengali", "Tamil", "English", "Bangla", "Telugu", "Malayalam", "Kannada", "Marathi", "Punjabi", "Bengoli", "Gujrati", "Korean", "Gujarati", "Spanish", "French", "German", "Chinese", "Arabic", "Portuguese", "Russian", "Japanese", "Odia", "Assamese", "Urdu"]
 
